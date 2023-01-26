@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap');
+
+body, * {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: 'Open Sans';
+}
+.header {
+    height: 100vh;
+    background: url(../img/header/header-bg.png) center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 41px;
+    color: #fff;
+    &__logo {
+        width: 101px;
+        margin: 0 auto 315px;
+    }
+    h1 {
+        margin-bottom: 20px;
+        font-family: 'Bebas Neue';
+        font-weight: 400;
+        font-size: 6rem;
+        Letter-spacing: 0.571rem;
+        text-transform: uppercase;
+    }
+    &__first {
+        margin-bottom: 220px;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+    &__second {
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 5rem;
+        }
+    }
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.navbar {
+    height: 65px;
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__logo {
+        img {
+            width: 80px;
+        }
+        height: 65px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .nav {
+        &__list {
+            height: 65px;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            list-style: none;
+        }
+        &__item {
+            display: flex;
+            height: 100%;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        &__link {
+            display: inline-block;
+            text-decoration: none;
+            color: #48555B;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 1.09px;
+            &:focus {
+                color: #00A4E5;
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        .container {
+            max-width: 75rem;
+        }
+    }
+    @media (max-width: 768px) {
+        .container {
+            max-width: none;
+        }
+    }
+}
+
+
+
+
