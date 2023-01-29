@@ -40,7 +40,7 @@ body {
   color: #48555B;
 }
 .header {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../img/header/header-bg.png) center no-repeat;
   background-size: cover;
   text-align: center;
@@ -67,6 +67,8 @@ body {
 .header__second {
   font-weight: 600;
   font-size: 1.1rem;
+  color: inherit;
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   .header h1 {
@@ -118,11 +120,13 @@ body {
 @media (max-width: 992px) {
   .navbar .container {
     max-width: 75rem;
+    padding: 0 2rem;
   }
 }
 @media (max-width: 768px) {
   .navbar .container {
     max-width: none;
+    padding: 0 2rem;
   }
 }
 hr {
@@ -163,9 +167,13 @@ hr {
   font-weight: bold;
   margin-bottom: 3rem;
 }
-.story__heading span {
+.story__heading a {
   color: #00A4E5;
   font-size: 2rem;
+  text-decoration: none;
+}
+.story__heading a:hover {
+  text-decoration: underline;
 }
 .story__pics {
   display: grid;
@@ -178,8 +186,48 @@ hr {
   justify-self: end;
   align-self: flex-end;
 }
+@media (max-width: 992px) {
+  .story .container {
+    max-width: 75rem;
+    padding: 0 2rem;
+  }
+  .story .story__pics-item {
+    justify-self: center;
+  }
+  .story .story__row {
+    display: block;
+    text-align: center;
+  }
+  .story .story__body {
+    display: block;
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .story .story {
+    padding-bottom: 2rem;
+  }
+  .story .story .container {
+    max-width: none;
+  }
+  .story .story__pics-item {
+    justify-self: center;
+  }
+}
+button {
+  width: 15rem;
+  height: 4rem;
+  background-color: #00A4E5;
+  border: none;
+  cursor: pointer;
+  font-weight: Bold;
+  font-size: 1.3rem;
+  color: #fff;
+  text-transform: uppercase;
+}
 .capabilities {
-  padding-bottom: 23.5rem;
+  padding-bottom: 10rem;
 }
 .capabilities__up {
   display: flex;
@@ -191,10 +239,9 @@ hr {
 .capabilities__up-text {
   margin-right: 3rem;
   max-width: 40rem;
-}
-.capabilities__up-button {
-  width: 15rem;
-  height: 4rem;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.02rem;
 }
 .capabilities__low {
   display: grid;
@@ -212,4 +259,80 @@ hr {
 .capabilities__low-item {
   padding: 4rem 2rem;
   border: 1px solid #E6E6E6;
+}
+@media (max-width: 992px) {
+  .capabilities .container {
+    max-width: 75rem;
+    padding: 0 2rem;
+  }
+  .capabilities .capabilities__up {
+    display: block;
+    text-align: center;
+  }
+  .capabilities .capabilities__up .title-wrapper {
+    margin: 0 auto 2rem;
+  }
+  .capabilities .capabilities__up hr {
+    margin: 0 auto;
+  }
+  .capabilities .capabilities__up-text {
+    margin: 0 auto 2rem;
+  }
+  .capabilities .capabilities__low-item {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .capabilities .container {
+    max-width: none;
+    padding: 0 2rem;
+  }
+}
+.amazing {
+  padding: 12rem 0 23rem;
+  background: url(../img/amazing-bg.png) center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.amazing h2 {
+  width: 35rem;
+  margin: 0 auto;
+  font-weight: Bold;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  letter-spacing: 0.15px;
+  margin-bottom: 3.5rem;
+}
+.signup {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+.signup p,
+.signup .login {
+  display: inline-block;
+  height: 4rem;
+}
+.signup p {
+  margin-right: 7rem;
+  font-weight: Bold;
+  font-size: 2.2rem;
+  letter-spacing: 0.85px;
+}
+.signup .login {
+  background-color: #fff;
+}
+.signup input {
+  border: none;
+  height: 100%;
+  padding: 0 10rem 0 1.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.07px;
+}
+.signup button {
+  font-weight: Bold;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  border: none;
 }

@@ -14,7 +14,7 @@ body {
     color: @text;
 }
 .header {
-    height: 100vh;
+    min-height: 100vh;
     background: url(../img/header/header-bg.png) center no-repeat;
     background-size: cover;
     text-align: center;
@@ -40,6 +40,8 @@ body {
     &__second {
         font-weight: 600;
         font-size: 1.1rem;
+        color: inherit;
+        text-decoration: none;
     }
 
     @media (max-width: 768px) {
@@ -96,11 +98,13 @@ body {
     @media (max-width: 992px) {
         .container {
             max-width: 75rem;
+            padding: 0 2rem;
         }
     }
     @media (max-width: 768px) {
         .container {
             max-width: none;
+            padding: 0 2rem;
         }
     }
 }
@@ -122,6 +126,8 @@ hr {
     line-height: 2.3rem;
     letter-spacing: 0.19px;
 }
+
+
 .story {
     text-align: center;
     padding-bottom: 12rem;
@@ -142,12 +148,15 @@ hr {
         font-size: 2rem;
         font-weight: bold;
         margin-bottom: 3rem;
-        span {
+        a {
             color: @blue;
             font-size: 2rem;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
-
     &__pics {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -160,13 +169,54 @@ hr {
 
         }
     }
-}
+    @media (max-width: 992px) {
+        .container {
+            max-width: 75rem;
+            padding: 0 2rem;
+        }
+        .story__pics-item {
+            justify-self: center;
+        }
+        .story__row {
+            display: block;
+            text-align: center;
+        }
+        .story__body {
+            display: block;
+            text-align: center;
+            margin:  0 auto 2rem;
+        }
+    }
+    @media (max-width: 768px) {
 
+        .story {
+            padding-bottom: 2rem;
+            .container {
+                max-width: none;
+            }
+            &__pics-item {
+                justify-self: center;
+            }
+        }
+    }
+}
+button {
+    width: 15rem;
+    height: 4rem;
+    background-color: @blue;
+    border: none;
+    cursor: pointer;
+    font-weight: Bold;
+    font-size: 1.3rem;
+    color: #fff;
+    text-transform: uppercase;
+}
 .capabilities {
-    padding-bottom: 23.5rem;
+    padding-bottom: 10rem;
     &__up {
         display: flex;
         margin-bottom: 7.5rem;
+
     }
     .title-wrapper {
         margin-right: 15rem;
@@ -174,10 +224,9 @@ hr {
     &__up-text {
         margin-right: 3rem;
         max-width: 40rem;
-    }
-    &__up-button {
-        width: 15rem;
-        height: 4rem;
+        font-size: 1.1rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.02rem;
     }
     &__low {
         display: grid;
@@ -197,7 +246,84 @@ hr {
             border: 1px solid #E6E6E6;
         }
     }
+    @media (max-width: 992px) {
+        .container {
+            max-width: 75rem;
+            padding: 0 2rem;
+        }
+        .capabilities__up {
+            display: block;
+            text-align: center;
+            .title-wrapper {
+                margin: 0 auto 2rem; 
+            }
+            hr {
+                margin: 0 auto;
+            }
+            &-text {
+                margin: 0 auto 2rem;
+            }
+        }
+        .capabilities__low-item {
+            text-align: center;
+        }
+    }
+    @media (max-width: 768px) {
+        .container {
+            max-width: none;
+            padding: 0 2rem;
+        }
+    }
     
+}
+
+.amazing {
+    padding: 12rem 0 23rem; 
+    background: url(../img/amazing-bg.png) center no-repeat;
+    background-size:cover;
+    text-align: center;
+    h2 {
+        width: 35rem;
+        margin: 0 auto;
+        font-weight: Bold;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        letter-spacing: 0.15px;
+        margin-bottom: 3.5rem;
+    }
+}
+
+.signup {
+    background-color: #000;
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+    p, .login {
+        display: inline-block;
+        height: 4rem;
+    }
+    p {
+        margin-right: 7rem;
+        font-weight: Bold;
+        font-size: 2.2rem;
+        letter-spacing: 0.85px;
+    }
+    .login {
+        background-color: #fff;
+    }
+    input {
+        border: none;
+        height: 100%;
+        padding: 0 10rem 0 1.5rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.07px;
+    }
+    button {
+        font-weight: Bold;
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+        border: none;
+    }
 }
 
 
