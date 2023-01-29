@@ -130,18 +130,25 @@ hr {
   height: 0.2rem;
   background-color: #00A4E5;
   border: none;
-  margin: auto;
-  margin-bottom: 3rem;
+}
+.title {
+  font-weight: Bold;
+  font-size: 1.8rem;
+  letter-spacing: 0.231rem;
+  margin-bottom: 1rem;
+}
+.text {
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.19px;
 }
 .story {
   text-align: center;
   padding-bottom: 12rem;
 }
-.story__title {
-  font-weight: Bold;
-  font-size: 1.8rem;
-  letter-spacing: 0.231rem;
-  margin-bottom: 1rem;
+.story__line {
+  margin: auto;
+  margin-bottom: 3rem;
 }
 .story__row {
   display: grid;
@@ -160,11 +167,6 @@ hr {
   color: #00A4E5;
   font-size: 2rem;
 }
-.story__text {
-  font-size: 1.3rem;
-  line-height: 2.3rem;
-  letter-spacing: 0.19px;
-}
 .story__pics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -175,4 +177,39 @@ hr {
   width: 14rem;
   justify-self: end;
   align-self: flex-end;
+}
+.capabilities {
+  padding-bottom: 23.5rem;
+}
+.capabilities__up {
+  display: flex;
+  margin-bottom: 7.5rem;
+}
+.capabilities .title-wrapper {
+  margin-right: 15rem;
+}
+.capabilities__up-text {
+  margin-right: 3rem;
+  max-width: 40rem;
+}
+.capabilities__up-button {
+  width: 15rem;
+  height: 4rem;
+}
+.capabilities__low {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.8rem;
+}
+.capabilities__low-heading {
+  font-weight: Bold;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.43px;
+  text-transform: uppercase;
+  margin: 2.5rem 0 1.3rem;
+}
+.capabilities__low-item {
+  padding: 4rem 2rem;
+  border: 1px solid #E6E6E6;
 }
