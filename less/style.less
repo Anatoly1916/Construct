@@ -348,12 +348,13 @@ button {
 
 .footer {
     color: #fff;
+    font-size: 1.1rem;
     a {
         color: #fff;
         text-decoration: none;
     }
     &__top {
-        height: 24rem;
+        min-height: 24rem;
         background-color: #141A20;
     }
     &__title {
@@ -370,29 +371,48 @@ button {
     .company, .links, .contact-us {
         width: 30%;
         text-align: left;
-        font-size: 1.1rem;
+        
     }
     .company {
         line-height: 1.9rem;
     }
+    &__body img {
+        margin-bottom: 1.5rem;
+    }
     .links {
-        
+        width: 30%;
         text-transform: uppercase;
         font-weight: Semibold;
-        line-height: 2.5rem;
         letter-spacing: 0.85px;
+        &__item {
+            line-height: 2.5rem;
+        }
+        &__item p::first-child{
+            line-height: 1.2rem;
+        }
     }
     &__body_links {
-        &a::first-line{
-            line-height: 0;
-        }
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .contact-us {
         line-height: 1.6rem;
         letter-spacing: 0.85px;
+        &__item {
+            width: 45%;
+            .contact {
+                margin-bottom: 1.5rem;
+            }
+        }
+        &__item:last-child {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    &__body_contact {
+        display: flex;
+        justify-content: space-between;
     }
     .copyright {
         display: flex;
@@ -400,9 +420,28 @@ button {
         background-color: #171819;
         justify-content: center;
         align-items: center;
+        letter-spacing: 0.85px;
     }
+
+    @media (max-width: 992px) {
+        .footer__wrapper {
+            padding: 0 3rem;
+        }
+    }   
+    @media (max-width: 768px) {
+        .footer__wrapper {
+            display: block;
+            
+        }
+        .footer__wrapper * {
+            text-align: center;
+            margin: 0 auto 1rem;
+        }
+        .footer__wrapper *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
 }
-
-
 
 

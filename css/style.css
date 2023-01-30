@@ -358,13 +358,14 @@ button {
 }
 .footer {
   color: #fff;
+  font-size: 1.1rem;
 }
 .footer a {
   color: #fff;
   text-decoration: none;
 }
 .footer__top {
-  height: 24rem;
+  min-height: 24rem;
   background-color: #141A20;
 }
 .footer__title {
@@ -383,25 +384,47 @@ button {
 .footer .contact-us {
   width: 30%;
   text-align: left;
-  font-size: 1.1rem;
 }
 .footer .company {
   line-height: 1.9rem;
 }
+.footer__body img {
+  margin-bottom: 1.5rem;
+}
 .footer .links {
+  width: 30%;
   text-transform: uppercase;
   font-weight: Semibold;
-  line-height: 2.5rem;
   letter-spacing: 0.85px;
+}
+.footer .links__item {
+  line-height: 2.5rem;
+}
+.footer .links__item p::first-child {
+  line-height: 1.2rem;
 }
 .footer__body_links {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .footer .contact-us {
   line-height: 1.6rem;
   letter-spacing: 0.85px;
+}
+.footer .contact-us__item {
+  width: 45%;
+}
+.footer .contact-us__item .contact {
+  margin-bottom: 1.5rem;
+}
+.footer .contact-us__item:last-child {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+.footer__body_contact {
+  display: flex;
+  justify-content: space-between;
 }
 .footer .copyright {
   display: flex;
@@ -409,4 +432,22 @@ button {
   background-color: #171819;
   justify-content: center;
   align-items: center;
+  letter-spacing: 0.85px;
+}
+@media (max-width: 992px) {
+  .footer .footer__wrapper {
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer .footer__wrapper {
+    display: block;
+  }
+  .footer .footer__wrapper * {
+    text-align: center;
+    margin: 0 auto 1rem;
+  }
+  .footer .footer__wrapper *:last-child {
+    margin-bottom: 0;
+  }
 }
