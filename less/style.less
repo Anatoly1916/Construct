@@ -294,35 +294,112 @@ button {
 }
 
 .signup {
-    background-color: #000;
+    background-color: #171819;
     color: #fff;
     padding: 3rem 0;
     text-align: center;
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 68.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
     p, .login {
         display: inline-block;
         height: 4rem;
     }
     p {
-        margin-right: 7rem;
         font-weight: Bold;
         font-size: 2.2rem;
         letter-spacing: 0.85px;
     }
     .login {
         background-color: #fff;
+        max-width: 40rem;
     }
     input {
         border: none;
         height: 100%;
-        padding: 0 10rem 0 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 5rem;
         font-size: 1.4rem;
         letter-spacing: 0.07px;
+        max-width: 30rem;
     }
     button {
         font-weight: Bold;
         font-size: 1.3rem;
         letter-spacing: 0.5px;
         border: none;
+    }
+
+    @media (max-width: 768px) {
+        .signup__wrapper, .signup__wrapper>p {
+            display: block;
+            margin: 0 auto;
+        }
+        .login {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+    }
+}
+
+.footer {
+    color: #fff;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    &__top {
+        height: 24rem;
+        background-color: #141A20;
+    }
+    &__title {
+        font-size: 1.1rem;
+        letter-spacing: 0.85px;
+        text-transform: uppercase;
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .company, .links, .contact-us {
+        width: 30%;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+    .company {
+        line-height: 1.9rem;
+    }
+    .links {
+        
+        text-transform: uppercase;
+        font-weight: Semibold;
+        line-height: 2.5rem;
+        letter-spacing: 0.85px;
+    }
+    &__body_links {
+        &a::first-line{
+            line-height: 0;
+        }
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .contact-us {
+        line-height: 1.6rem;
+        letter-spacing: 0.85px;
+    }
+    .copyright {
+        display: flex;
+        height: 6rem;
+        background-color: #171819;
+        justify-content: center;
+        align-items: center;
     }
 }
 
